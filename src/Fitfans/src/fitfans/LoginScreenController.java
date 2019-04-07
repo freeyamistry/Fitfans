@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ASS2;
+package Fitfans;
 
 //import ASS2.Resources.Database;
 import java.io.IOException;
@@ -42,12 +42,15 @@ public class LoginScreenController {
         String user = username.getText().trim();
         String password = pword.getText();
         try {
+            //search through database to find the username and password
             ResultSet rs = d.getResultSet("SELECT * FROM LOGIN WHERE "
                     + "USERNAME = '" + user + "' "
                     + "AND PASSWORD = '" + password + "'");
+            //if there is no result, incorrect password
             if (!rs.next()) {
                 loginOutput.setText("Incorrect username or password");
                 loginOutput.setVisible(true);
+            //if there is a result, correct password. show next button    
             } else {
                 loginOutput.setText("Login successful");
                 loginOutput.setVisible(true);

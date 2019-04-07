@@ -3,11 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ASS2;
-<<<<<<< HEAD
+package Fitfans;
 
-=======
->>>>>>> aa3ed9380d2b7790e14e02741b08ca8a28fc8c31
+
 
 
 import java.sql.SQLException;
@@ -18,10 +16,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-/**
- *
- * @author jacob
- */
+
 public class LoginScreen extends Application {
     
     @Override
@@ -35,19 +30,10 @@ public class LoginScreen extends Application {
         stage.show();
     }
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         launch(args);
     }
 
-<<<<<<< HEAD
-    private void loadDatabase() {
-       Database.createLoginTable();
-       Database.createMusicTable();
-=======
-   
     
     private void loadDatabase() throws SQLException {
        Database.createUserTable();
@@ -55,7 +41,7 @@ public class LoginScreen extends Application {
        Database.createGoalsTable();
        Database.createWeightTable();
        Database.createGymTable();
->>>>>>> aa3ed9380d2b7790e14e02741b08ca8a28fc8c31
+
     }
     
 }

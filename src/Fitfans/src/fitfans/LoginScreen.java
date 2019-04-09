@@ -43,6 +43,7 @@ public class LoginScreen extends Application {
        Database.createGymTable();
        
         System.out.println("woohooo");
+        System.out.println("i hate acct");
 
     }
     

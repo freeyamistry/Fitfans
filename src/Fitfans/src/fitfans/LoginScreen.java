@@ -46,6 +46,7 @@ public class LoginScreen extends Application {
         System.out.println("i hate acct");
         System.out.println("hi i hate my life ");
         System.out.println("yo");
+        System.out.println("hiiii");
 
     }
     

@@ -42,16 +42,16 @@ public class SignupScreenController {
     PageSwitchHelper pageSwitcher = new PageSwitchHelper();
 
     @FXML
-    private void handleSignupAction(ActionEvent event) {
+    private void handleConfirmAction(ActionEvent event) {
         String tusername = username.getText().trim();
 
         String temail = email.getText();
-                String tpword = pword.getText();
+        String tpword = pword.getText();
         String tgender = gender.getText();
         String tdob = dob.getText();
-        
+
         try {
-            String insertQuery = ("INSERT INTO User VALUES (" 
+            String insertQuery = ("INSERT INTO User VALUES ("
                     + tusername + "," + temail + "," + tpword + "," + tgender + "," + tdob + ")");
         } catch (Exception ex) {
             ex.printStackTrace();

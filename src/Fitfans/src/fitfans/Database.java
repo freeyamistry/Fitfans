@@ -34,6 +34,7 @@ public class Database {
 
         String createStatement = "CREATE TABLE IF NOT EXISTS User "
                 + "(USERNAME TEXT PRIMARY KEY,"
+                + "EMAIL TEXT NOT NULL,"
                 + "PASSWORD TEXT NOT NULL,"
                 + "GENDER TEXT NOT NULL,"
                 + "DOB TEXT NOT NULL"

@@ -5,7 +5,7 @@
  */
 package fitfans;
 
-//import Week7Solutions.Resources.Database;
+//import fitfans.Database;
 import java.io.IOException;
 import java.sql.ResultSet;
 import javafx.event.ActionEvent;
@@ -19,53 +19,48 @@ import javafx.scene.control.TextField;
  *
  * @author jacob
  */
-public class LoginScreenController {
+public class SignupScreenController {
 
     @FXML
     private Label loginOutput;
 
     @FXML
     private TextField username;
-
+    @FXML
+    private TextField email;
     @FXML
     private PasswordField pword;
-
+    @FXML
+    private TextField gender;
+    @FXML
+    private TextField dob;
     @FXML
     private Button nextBtn;
-
-    @FXML
-    private Button SignupBtn;
 
     Database d = new Database();
 
     PageSwitchHelper pageSwitcher = new PageSwitchHelper();
 
     @FXML
-    private void handleLoginButtonAction(ActionEvent event) {
-        String user = username.getText().trim();
-        String password = pword.getText();
+    private void handleSignupAction(ActionEvent event) {
+        String tusername = username.getText().trim();
+
+        String temail = email.getText();
+                String tpword = pword.getText();
+        String tgender = gender.getText();
+        String tdob = dob.getText();
+        
         try {
-            ResultSet rs = d.getResultSet("SELECT * FROM LOGIN WHERE "
-                    + "USERNAME = '" + user + "' "
-                    + "AND PASSWORD = '" + password + "'");
-            if (!rs.next()) {
-                loginOutput.setText("Incorrect username or password");
-                loginOutput.setVisible(true);
-            } else {
-                loginOutput.setText("Login successful");
-                loginOutput.setVisible(true);
-                nextBtn.setVisible(true);
-            }
-            rs.close();
+            String insertQuery = ("INSERT INTO User VALUES (" 
+                    + tusername + "," + temail + "," + tpword + "," + tgender + "," + tdob + ")");
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-        pageSwitcher.switcher(event, "MusicList.fxml");
     }
 
     @FXML
-    private void handleSignupButtonAction(ActionEvent event) throws IOException {
-        pageSwitcher.switcher(event, "SignupScreen.fxml");
+    private void handleNextButtonAction(ActionEvent event) throws IOException {
+        pageSwitcher.switcher(event, "LoginScreen.fxml");
     }
 
     @FXML

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="430.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="test1.FXMLDocumentController">
+   <children>
+      <AnchorPane layoutX="213.0" prefHeight="430.0" prefWidth="487.0">
+         <children>
+            <HBox layoutX="34.0" layoutY="125.0" prefHeight="36.0" prefWidth="347.0" />
+            <VBox layoutX="41.0" layoutY="281.0" prefHeight="117.0" prefWidth="143.0">
+               <children>
+                  <Button fx:id="button_one" mnemonicParsing="false" onAction="#pressButtonThree" prefHeight="36.0" prefWidth="142.0" text="Button" />
+                  <Button mnemonicParsing="false" prefHeight="36.0" prefWidth="142.0" text="Button" />
+                  <Button mnemonicParsing="false" prefHeight="36.0" prefWidth="142.0" text="Button" />
+               </children>
+            </VBox>
+            <Label fx:id="test_label1" layoutX="24.0" layoutY="14.0" prefHeight="50.0" prefWidth="366.0" text="Welcome To your Dashboard " textAlignment="CENTER">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Button layoutX="331.0" layoutY="380.0" mnemonicParsing="false" onAction="#pressButtonThree" prefHeight="36.0" prefWidth="142.0" text="Back " />
+         </children>
+      </AnchorPane>
+      <HBox layoutX="3.0" layoutY="105.0" onMouseClicked="#pressButtonAreobicsEx" prefHeight="28.0" prefWidth="200.0" styleClass="sideButton" stylesheets="@SophiasFantasticStyle.css">
+         <children>
+            <ImageView fitHeight="24.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" />
+            <Label text="Exercise ">
+               <HBox.margin>
+                  <Insets left="5.0" top="5.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutX="3.0" layoutY="133.0" onMouseClicked="#pressButtonResistance" prefHeight="28.0" prefWidth="200.0" styleClass="sideButton" stylesheets="@SophiasFantasticStyle.css">
+         <children>
+            <ImageView fitHeight="24.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </ImageView>
+            <Label text="Food">
+               <HBox.margin>
+                  <Insets left="5.0" top="5.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutX="3.0" layoutY="161.0" onMouseClicked="#pressButtonTwo" prefHeight="28.0" prefWidth="200.0" styleClass="sideButton" stylesheets="@SophiasFantasticStyle.css">
+         <children>
+            <ImageView fitHeight="24.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </ImageView>
+            <Label text="Medical">
+               <HBox.margin>
+                  <Insets left="5.0" top="5.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutX="3.0" layoutY="77.0" onMouseClicked="#pressButtonHome" prefHeight="28.0" prefWidth="200.0" styleClass="sideButton" stylesheets="@SophiasFantasticStyle.css">
+         <children>
+            <ImageView fitHeight="24.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </ImageView>
+            <Label prefHeight="17.0" prefWidth="54.0" text="Home" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets left="5.0" top="5.0" />
+               </HBox.margin>
+               <opaqueInsets>
+                  <Insets right="10.0" />
+               </opaqueInsets>
+            </Label>
+         </children>
+      </HBox>
+      <Label fx:id="test_label" layoutX="8.0" layoutY="13.0" prefHeight="50.0" prefWidth="190.0" text="User_name " textAlignment="CENTER">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <HBox layoutX="3.0" layoutY="189.0" onMouseClicked="#pressButtonTwo" prefHeight="28.0" prefWidth="200.0" styleClass="sideButton" stylesheets="@SophiasFantasticStyle.css">
+         <children>
+            <ImageView fitHeight="24.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </ImageView>
+            <Label text="Sleep">
+               <HBox.margin>
+                  <Insets left="5.0" top="5.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutX="3.0" layoutY="217.0" onMouseClicked="#pressButtonTwo" prefHeight="28.0" prefWidth="200.0" styleClass="sideButton" stylesheets="@SophiasFantasticStyle.css">
+         <children>
+            <ImageView fitHeight="24.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </ImageView>
+            <Label text="Wellness">
+               <HBox.margin>
+                  <Insets left="5.0" top="5.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutX="3.0" layoutY="245.0" onMouseClicked="#pressButtonTwo" prefHeight="28.0" prefWidth="200.0" styleClass="sideButton" stylesheets="@SophiasFantasticStyle.css">
+         <children>
+            <ImageView fitHeight="24.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </ImageView>
+            <Label text="Setting">
+               <HBox.margin>
+                  <Insets left="5.0" top="5.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -18,7 +18,7 @@ import javafx.stage.Stage;
  *
  * @author jacob
  */
-public class PageSwitchHelper {
+public class PageSwitchHelpersophia {
     
     public void switcher(ActionEvent event, String page) throws IOException {
         System.out.println("Switching pages to new");

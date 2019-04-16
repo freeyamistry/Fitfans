@@ -65,7 +65,6 @@ public class Database {
                 + "(USERNAME TEXT PRIMARY KEY,"
                 + "ATTENDANCE TEXT NOT NULL,"
                 + "DATE TEXT NOT NULL,"
-                + "TIMESPENT INTEGER NOT NULL"
                 + ");";
 
         st.execute(createStatement);

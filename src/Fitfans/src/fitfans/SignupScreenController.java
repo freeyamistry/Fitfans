@@ -23,7 +23,6 @@ public class SignupScreenController {
 
     @FXML
     private Label loginOutput;
-
     @FXML
     private TextField username;
     @FXML

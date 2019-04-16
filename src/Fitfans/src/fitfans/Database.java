@@ -77,7 +77,7 @@ public class Database {
 
         String createStatement = "CREATE TABLE IF NOT EXISTS Weight "
                 + "(USERNAME TEXT PRIMARY KEY,"
-                + "WEIGHT TEXT NOT NULL,"
+                + "WEIGHT INTEGER NOT NULL,"
                 + "DATE TEXT NOT NULL,"
                 + ");";
 

@@ -41,7 +41,7 @@ public class LoginScreenController {
     PageSwitchHelper pageSwitcher = new PageSwitchHelper();
 
     @FXML
-    private void handleLoginButtonAction(ActionEvent event) {
+    private void handleLoginButtonAction(ActionEvent event) throws IOException {
         String user = username.getText().trim();
         String password = pword.getText();
         try {
@@ -60,7 +60,7 @@ public class LoginScreenController {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-        pageSwitcher.switcher(event, "MusicList.fxml");
+        pageSwitcher.switcher(event, "SignupScreen.fxml");
     }
 
     @FXML

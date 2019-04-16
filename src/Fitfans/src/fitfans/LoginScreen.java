@@ -41,6 +41,8 @@ public class LoginScreen extends Application {
        Database.createGoalsTable();
        Database.createWeightTable();
        Database.createGymTable();
+       
+       
     }
     
 }

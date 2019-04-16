@@ -7,9 +7,12 @@ package fitfans;
 
 //import fitfans.Database;
 import java.io.IOException;
+import java.net.URL;
 import java.sql.ResultSet;
+import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -19,7 +22,7 @@ import javafx.scene.control.TextField;
  *
  * @author jacob
  */
-public class SignupScreenController {
+public class SignupScreenController implements Initializable  {
 
     @FXML
     private Label loginOutput;
@@ -67,6 +70,11 @@ public class SignupScreenController {
         System.out.println("calling init");
         loginOutput.setVisible(false);
         nextBtn.setVisible(false);
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

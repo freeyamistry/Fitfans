@@ -80,8 +80,14 @@ public class Database {
                 + "WEIGHT INTEGER NOT NULL,"
                 + "DATE TEXT NOT NULL,"
                 + ");";
+        
+       String sqlCommand = "DROP TABLE IF EXIST 'fitfans.Weight'";
+        System.out.println("dropped weights" + st.executeUpdate(sqlCommand));
+        
 
         st.execute(createStatement);
+        
+        
     }
 
     public static void createGoalsTable() throws SQLException {

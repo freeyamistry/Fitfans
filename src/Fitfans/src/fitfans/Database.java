@@ -97,6 +97,37 @@ public class Database {
 
         st.execute(createStatement);
     }
+    
+     public static void createExerciseTable() throws SQLException {
+        openConnection();
+        Statement st = conn.createStatement();
+
+        String createStatement = "CREATE TABLE IF NOT EXISTS Exercise "
+                + "(RUNNING TEXT,"
+                + "SWIMMING TEXT,"
+                + "CYCLING TEXT,"
+                + "SQUATS TEXT,"
+                + "LUNGES TEXT,"
+                + "BICEPCURLS TEXT,"
+                + "STEPS TEXT,"
+                + "GYM TEXT"
+                + ");";
+
+        st.execute(createStatement);
+    }
+    
+    public static void createWellnessTable() throws SQLException {
+        openConnection();
+        Statement st = conn.createStatement();
+
+        String createStatement = "CREATE TABLE IF NOT EXISTS Wellness "
+                + "(EMOTION TEXT,"
+                + "JOURNAL TEXT,"
+                + "MEDITATION TEXT"
+                + ");";
+
+        st.execute(createStatement);
+    }
 
     public ResultSet getResultSet(String sqlstatement) throws SQLException {
         openConnection();

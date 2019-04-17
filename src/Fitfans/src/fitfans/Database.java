@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Fitfans;
+package fitfans;
 
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
@@ -41,6 +41,8 @@ public class Database {
                 + ");";
 
         st.execute(createStatement);
+//        st.close();
+//        conn.close();
     }
 
     public static void createFoodTable() throws SQLException {
@@ -64,7 +66,7 @@ public class Database {
         String createStatement = "CREATE TABLE IF NOT EXISTS Gym "
                 + "(USERNAME TEXT PRIMARY KEY,"
                 + "ATTENDANCE TEXT NOT NULL,"
-                + "DATE TEXT NOT NULL,"
+                + "DATE TEXT NOT NULL"
                 + ");";
 
         st.execute(createStatement);
@@ -77,16 +79,11 @@ public class Database {
         String createStatement = "CREATE TABLE IF NOT EXISTS Weight "
                 + "(USERNAME TEXT PRIMARY KEY,"
                 + "WEIGHT INTEGER NOT NULL,"
-                + "DATE TEXT NOT NULL,"
+                + "DATE TEXT NOT NULL"
                 + ");";
-        
-       String sqlCommand = "DROP TABLE IF EXIST 'fitfans.Weight'";
-        System.out.println("dropped weights" + st.executeUpdate(sqlCommand));
-        
 
         st.execute(createStatement);
-        
-        
+
     }
 
     public static void createGoalsTable() throws SQLException {
@@ -103,4 +100,10 @@ public class Database {
         st.execute(createStatement);
     }
 
+    public ResultSet getResultSet(String sqlstatement) throws SQLException {
+        openConnection();
+        java.sql.Statement statement = conn.createStatement();
+        ResultSet RS = statement.executeQuery(sqlstatement);
+        return RS;
+    }
 }

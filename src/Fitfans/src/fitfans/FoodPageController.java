@@ -8,7 +8,10 @@ package test1;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
 /**
@@ -22,6 +25,10 @@ public class FoodPageController extends FXMLDocumentController implements Initia
      * Initializes the controller class.
      */
     PageSwitcherHelper pageSwitcherHelper = new PageSwitcherHelper();
+    @FXML
+    private DatePicker date;
+    @FXML
+    private TextField kj;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -33,5 +40,21 @@ public class FoodPageController extends FXMLDocumentController implements Initia
         test_label.setText("UserName");
         pageSwitcherHelper.switcher(event, "Food.fxml");
     }
+    
+      public void presssubmitBtn(MouseEvent event) throws IOException {
+        System.out.println("food intake submitted");
+       String tdate = date.getText().trim();
+       String meal;
+       String tkj = date.getText();
 
-}
+
+        try {
+            String insertQuery = ("INSERT INTO Food VALUES ("
+                    + tusername + "," + temail + "," + tpword + "," + tgender + "," + tdob + ")");
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
+        pageSwitcherHelper.switcher(event, "Food.fxml");
+
+} } 

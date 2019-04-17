@@ -39,14 +39,13 @@ public class SignupScreenController implements Initializable  {
     @FXML
     private Button nextBtn;
 
-    Database d = new Database();
+    private Database d = new Database();
 
     PageSwitchHelper pageSwitcher = new PageSwitchHelper();
 
     @FXML
     private void handleConfirmAction(ActionEvent event) {
         String tusername = username.getText().trim();
-
         String temail = email.getText();
         String tpword = pword.getText();
         String tgender = gender.getText();

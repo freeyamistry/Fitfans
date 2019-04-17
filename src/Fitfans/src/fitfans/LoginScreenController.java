@@ -14,7 +14,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-
 /**
  *
  * @author jacob
@@ -30,8 +29,8 @@ public class LoginScreenController {
     @FXML
     private PasswordField pword;
 
-    @FXML
-    private Button nextBtn;
+//    @FXML
+//    private Button nextBtn;
 
     @FXML
     private Button SignupBtn;
@@ -54,7 +53,7 @@ public class LoginScreenController {
             } else {
                 loginOutput.setText("Login successful");
                 loginOutput.setVisible(true);
-                nextBtn.setVisible(true);
+                //nextBtn.setVisible(true);
             }
             rs.close();
         } catch (Exception ex) {
@@ -71,8 +70,8 @@ public class LoginScreenController {
     @FXML
     public void initialize() {
         System.out.println("calling init");
-        loginOutput.setVisible(false);
-        nextBtn.setVisible(false);
+        //loginOutput.setVisible(false);
+        //nextBtn.setVisible(false);
     }
 
 }

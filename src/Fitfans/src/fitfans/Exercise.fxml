@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="test1.ExerciseController">
+   <children>
+      <AnchorPane layoutX="300.0" layoutY="89.0" prefHeight="292.0" prefWidth="267.0">
+         <children>
+            <TextField fx:id="running" layoutX="140.0" layoutY="6.0" prefHeight="27.0" prefWidth="71.0" />
+            <TextField fx:id="swimming" layoutX="140.0" layoutY="42.0" prefHeight="27.0" prefWidth="71.0" />
+            <TextField fx:id="cycling" layoutX="140.0" layoutY="83.0" prefHeight="27.0" prefWidth="71.0" />
+            <TextField fx:id="squats" layoutX="140.0" layoutY="121.0" prefHeight="27.0" prefWidth="71.0" />
+            <TextField fx:id="lunges" layoutX="140.0" layoutY="157.0" prefHeight="27.0" prefWidth="71.0" />
+            <TextField fx:id="bicepcurls" layoutX="140.0" layoutY="191.0" prefHeight="27.0" prefWidth="71.0" />
+            <TextField fx:id="steps" layoutX="140.0" layoutY="225.0" prefHeight="27.0" prefWidth="71.0" />
+            <TextField fx:id="gym" layoutX="140.0" layoutY="257.0" prefHeight="27.0" prefWidth="71.0" />
+            <Text layoutX="90.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text layoutX="76.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Running" />
+            <Text layoutX="76.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Swimming" />
+            <Text layoutX="76.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cycling" />
+            <Text layoutX="84.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Squats" />
+            <Text layoutX="86.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lunges" />
+            <Text layoutX="90.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Biceps" />
+            <Text layoutX="90.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Steps" />
+            <Text layoutX="93.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gym" />
+            <Text layoutX="214.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="km" />
+            <Text layoutX="223.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="reps" />
+            <Button fx:id="submit" layoutX="14.0" layoutY="244.0" mnemonicParsing="false" text="Button" />
+            <Button fx:id="page" layoutX="14.0" layoutY="20.0" mnemonicParsing="false" text="Page" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

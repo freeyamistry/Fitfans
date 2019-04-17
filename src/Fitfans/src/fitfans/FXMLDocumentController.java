@@ -89,7 +89,7 @@ public class FXMLDocumentController implements Initializable {
     public void pressButtonAreobicsEx(MouseEvent event) throws IOException {
         System.out.println("Button AreobicsEx clicked");
         test_label.setText("Button AreobicsEx pressed");
-        pageSwitcherHelper.switcher(event, "AreobicsPage.fxml");
+        pageSwitcherHelper.switcher(event, "Exercise.fxml");
     }
 
     public void pressButtonResistance(MouseEvent event) throws IOException {

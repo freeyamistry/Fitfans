@@ -18,7 +18,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
-import static test1.Database.conn;
+import static fitfans.Database.conn;
 
 /**
  * FXML Controller class

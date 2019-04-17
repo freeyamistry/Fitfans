@@ -3,11 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package test1;
+package fitfans;
 
+import static fitfans.Database.conn;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.DatePicker;
@@ -40,7 +44,7 @@ public class FoodPageController extends FXMLDocumentController implements Initia
         test_label.setText("UserName");
         pageSwitcherHelper.switcher(event, "Food.fxml");
     }
-    
+  
       public void presssubmitBtn(MouseEvent event) throws IOException {
         System.out.println("food intake submitted");
        String tdate = date.getText().trim();
@@ -56,5 +60,5 @@ public class FoodPageController extends FXMLDocumentController implements Initia
         }
     }
         pageSwitcherHelper.switcher(event, "Food.fxml");
+} 
 
-} } 

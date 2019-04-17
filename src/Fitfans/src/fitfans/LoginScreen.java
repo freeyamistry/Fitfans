@@ -22,7 +22,7 @@ public class LoginScreen extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         loadDatabase();
-        Parent root = FXMLLoader.load(getClass().getResource("LoginScreen.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("SignupScreen.fxml"));
         
         Scene scene = new Scene(root);
         

@@ -6,9 +6,12 @@
 package fitfans;
 
 //import fitfans.Database;
+import static fitfans.Database.conn;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -22,7 +25,7 @@ import javafx.scene.control.TextField;
  *
  * @author jacob
  */
-public class SignupScreenController implements Initializable  {
+public class SignupScreenController implements Initializable {
 
     @FXML
     private Label loginOutput;
@@ -52,8 +55,17 @@ public class SignupScreenController implements Initializable  {
         String tdob = dob.getText();
 
         try {
-            String insertQuery = ("INSERT INTO User VALUES ("
-                    + tusername + "," + temail + "," + tpword + "," + tgender + "," + tdob + ")");
+            Statement st = conn.createStatement();
+
+            String insertData = "INSERT INTO User(USERNAME, EMAIL, PASSWORD, GENDER, DOB) VALUES('"
+                    + tusername + "','" + temail + "','" + tpword + "','" + tgender + "','" + tdob + "');";
+            st.execute(insertData);
+
+            String query = "select * from User";
+
+            ResultSet rs = st.executeQuery(query);
+            System.out.println("The user is " + rs.getString(1) + " " + rs.getString(2) + " " + rs.getString(3) + " " + rs.getString(4) + " " + rs.getString(5));
+
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -64,16 +76,15 @@ public class SignupScreenController implements Initializable  {
         pageSwitcher.switcher(event, "LoginScreen.fxml");
     }
 
-    @FXML
-    public void initialize() {
-        System.out.println("calling init");
-        loginOutput.setVisible(false);
-        nextBtn.setVisible(false);
-    }
-
-    @Override
+//    @FXML
+//    public void initialize() {
+//        System.out.println("calling init");
+//        loginOutput.setVisible(false);
+//        nextBtn.setVisible(false);
+//    }
+    //  @Override
     public void initialize(URL location, ResourceBundle resources) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

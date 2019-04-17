@@ -41,8 +41,6 @@ public class Database {
                 + ");";
 
         st.execute(createStatement);
-//        st.close();
-//        conn.close();
     }
 
     public static void createFoodTable() throws SQLException {

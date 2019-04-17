@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1" fx:controller="test1.WellnessController">
+   <children>
+      <AnchorPane layoutX="277.0" layoutY="73.0" prefHeight="291.0" prefWidth="295.0">
+         <children>
+            <TextField fx:id="emotion" layoutX="80.0" layoutY="40.0" />
+            <TextArea layoutX="80.0" layoutY="81.0" prefHeight="122.0" prefWidth="167.0" />
+            <TextField layoutX="80.0" layoutY="215.0" />
+            <Text layoutX="24.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Emotion" />
+            <Text layoutX="26.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Journal" />
+            <Text layoutX="12.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Meditation" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="insert" layoutX="513.0" layoutY="364.0" mnemonicParsing="false" text="Button" />
+   </children>
+</AnchorPane>

@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1" fx:controller="test1.FoodPageController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="test1.FoodPageController">
     <stylesheets>
         <URL value="@SophiasFantasticStyle.css" />
     </stylesheets>
@@ -28,7 +28,7 @@
                         <Font size="23.0" />
                      </font>
                   </Label>
-                  <Button layoutX="331.0" layoutY="380.0" mnemonicParsing="false" onAction="#pressButtonThree" prefHeight="36.0" prefWidth="142.0" text="Done" />
+                  <Button fx:id="submitBtn" layoutX="331.0" layoutY="380.0" mnemonicParsing="false" onAction="#presssubmitBtn" prefHeight="36.0" prefWidth="142.0" text="Submit" />
                   <VBox layoutX="14.0" layoutY="76.0" prefHeight="112.0" prefWidth="352.0">
                      <children>
                         <Label fx:id="test_label12" prefHeight="47.0" prefWidth="210.0" text="Breakfast" textAlignment="CENTER">
@@ -38,9 +38,9 @@
                         </Label>
                         <HBox prefHeight="27.0" prefWidth="368.0">
                            <children>
-                              <DatePicker prefHeight="29.0" prefWidth="117.0" />
+                              <DatePicker fx:id="date" prefHeight="29.0" prefWidth="117.0" />
                               <ChoiceBox fx:id="choiceEx" prefHeight="29.0" prefWidth="145.0" />
-                              <TextField prefHeight="27.0" prefWidth="39.0" />
+                              <TextField fx:id="kl" prefHeight="27.0" prefWidth="39.0" />
                               <Label fx:id="test_label122" prefHeight="28.0" prefWidth="31.0" text="KJ" textAlignment="CENTER">
                                  <font>
                                     <Font size="15.0" />

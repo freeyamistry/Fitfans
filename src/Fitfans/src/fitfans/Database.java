@@ -51,7 +51,7 @@ public class Database {
                 + "(USERNAME TEXT PRIMARY KEY,"
                 + "DATE TEXT NOT NULL,"
                 + "KILOJOULES INTEGER NOT NULL,"
-                + "FOODGROUP TEXT NOT NULL"
+                + "FOODGROUP TEXT"
                 + ");";
 
         st.execute(createStatement);

@@ -37,7 +37,7 @@ public class LoginScreenController {
 
     Database d = new Database();
 
-    PageSwitchHelper pageSwitcher = new PageSwitchHelper();
+    PageSwitcherHelper pageSwitcher = new PageSwitcherHelper();
 
     @FXML
     private void handleLoginButtonAction(ActionEvent event) throws IOException {

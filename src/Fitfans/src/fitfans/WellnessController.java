@@ -33,7 +33,7 @@ public class WellnessController implements Initializable {
     
     private Database d = new Database();
 
-    PageSwitchHelper pageSwitcher = new PageSwitchHelper();
+    PageSwitcherHelper pageSwitcher = new PageSwitcherHelper();
 
     @FXML
     private void handleConfirmAction(ActionEvent event) {
@@ -76,10 +76,10 @@ public class WellnessController implements Initializable {
      * Initializes the controller class.
      * @param url
      */
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
+   // @Override
+    //public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }   
+    //}   
 }
     
 

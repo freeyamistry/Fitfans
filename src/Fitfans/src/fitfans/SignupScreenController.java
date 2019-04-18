@@ -44,7 +44,7 @@ public class SignupScreenController implements Initializable {
 
     private Database d = new Database();
 
-    PageSwitchHelper pageSwitcher = new PageSwitchHelper();
+    PageSwitcherHelper pageSwitcher = new PageSwitcherHelper();
 
     @FXML
     private void handleConfirmAction(ActionEvent event) {

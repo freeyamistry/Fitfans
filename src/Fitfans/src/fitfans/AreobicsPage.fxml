@@ -3,7 +3,6 @@
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
@@ -14,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="test1.AreobicsPageController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="test1.AreobicsPageController">
     <stylesheets>
         <URL value="@SophiasFantasticStyle.css" />
     </stylesheets>
@@ -38,7 +37,6 @@
                         </Label>
                         <HBox prefHeight="27.0" prefWidth="368.0">
                            <children>
-                              <DatePicker prefHeight="29.0" prefWidth="117.0" />
                               <ChoiceBox fx:id="choiceEx" prefHeight="29.0" prefWidth="145.0" />
                               <TextField prefHeight="27.0" prefWidth="39.0" />
                               <Label fx:id="test_label122" prefHeight="28.0" prefWidth="31.0" text="km" textAlignment="CENTER">
@@ -60,10 +58,9 @@
                         </Label>
                         <HBox prefHeight="27.0" prefWidth="350.0">
                            <children>
-                              <DatePicker prefHeight="29.0" prefWidth="117.0" />
                               <ChoiceBox fx:id="choiceRes" prefHeight="29.0" prefWidth="145.0" />
                               <TextField prefHeight="27.0" prefWidth="40.0" />
-                              <Label fx:id="test_label1221" prefHeight="28.0" prefWidth="31.0" text="km" textAlignment="CENTER">
+                              <Label fx:id="test_label1221" prefHeight="28.0" prefWidth="31.0" text="reps" textAlignment="CENTER">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
@@ -81,7 +78,6 @@
                         </Label>
                         <HBox prefHeight="40.0" prefWidth="221.0">
                            <children>
-                              <DatePicker prefHeight="20.0" prefWidth="117.0" />
                               <TextField prefHeight="27.0" prefWidth="56.0" />
                               <Label fx:id="test_label12211" prefHeight="28.0" prefWidth="49.0" text="Steps" textAlignment="CENTER">
                                  <font>
@@ -94,16 +90,9 @@
                   </VBox>
                   <VBox layoutX="233.0" layoutY="271.0" prefHeight="94.0" prefWidth="245.0">
                      <children>
-                        <Label fx:id="test_label12111" prefHeight="47.0" prefWidth="255.0" text="Gym" textAlignment="CENTER">
-                           <font>
-                              <Font size="23.0" />
-                           </font>
-                        </Label>
                         <HBox prefHeight="37.0" prefWidth="236.0">
                            <children>
                               <DatePicker prefHeight="26.0" prefWidth="113.0" />
-                              <CheckBox mnemonicParsing="false" prefHeight="26.0" prefWidth="47.0" text="Yes" />
-                              <CheckBox mnemonicParsing="false" prefHeight="26.0" prefWidth="42.0" text="No" />
                            </children>
                         </HBox>
                      </children>

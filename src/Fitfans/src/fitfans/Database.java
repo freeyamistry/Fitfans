@@ -103,14 +103,11 @@ public class Database {
         Statement st = conn.createStatement();
 
         String createStatement = "CREATE TABLE IF NOT EXISTS Exercise "
-                + "(RUNNING TEXT,"
-                + "SWIMMING TEXT,"
-                + "CYCLING TEXT,"
-                + "SQUATS TEXT,"
-                + "LUNGES TEXT,"
-                + "BICEPCURLS TEXT,"
-                + "STEPS TEXT,"
-                + "GYM TEXT"
+                + "(USERNAME TEXT,"
+                + "AEROBICEXERCISE TEXT,"
+                + "RESISTANCEEXERCISE TEXT,"
+                + "STEPCOUNT TEXT"
+               
                 + ");";
 
         st.execute(createStatement);

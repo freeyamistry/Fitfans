@@ -33,37 +33,42 @@ public class LoginScreenController {
 //    private Button nextBtn;
 
     @FXML
-    private Button SignupBtn;
+    private Button signupbtn;
+    @FXML
+    private Button loginbtn;
 
     Database d = new Database();
 
     PageSwitcherHelper pageSwitcher = new PageSwitcherHelper();
 
     @FXML
-    private void handleLoginButtonAction(ActionEvent event) throws IOException {
-        String user = username.getText().trim();
-        String password = pword.getText();
+    private void handleLoginButton(ActionEvent event) throws IOException {
+        String tusername = username.getText().trim();
+        String tpword = pword.getText();
         try {
-            ResultSet rs = d.getResultSet("SELECT * FROM LOGIN WHERE "
-                    + "USERNAME = '" + user + "' "
-                    + "AND PASSWORD = '" + password + "'");
+            ResultSet rs = d.getResultSet("SELECT * FROM User WHERE "
+                    + "USERNAME = '" + tusername + "' "
+                    + "AND PASSWORD = '" + tpword + "'");
             if (!rs.next()) {
-                loginOutput.setText("Incorrect username or password");
-                loginOutput.setVisible(true);
+                System.out.println("Incorrect username or password");
+              //  loginOutput.setText("Incorrect username or password");
+              //  loginOutput.setVisible(true);
             } else {
-                loginOutput.setText("Login successful");
-                loginOutput.setVisible(true);
+                System.out.println("Login successful");
+                //loginOutput.setText("Login successful");
+               // loginOutput.setVisible(true);
+                pageSwitcher.switcher(event, "FXMLDocument.fxml");
+                
                 //nextBtn.setVisible(true);
             }
             rs.close();
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-        pageSwitcher.switcher(event, "SignupScreen.fxml");
     }
 
     @FXML
-    private void handleSignupButtonAction(ActionEvent event) throws IOException {
+    private void handleSignupButton(ActionEvent event) throws IOException {
         pageSwitcher.switcher(event, "SignupScreen.fxml");
     }
 

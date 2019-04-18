@@ -22,7 +22,7 @@ public class LoginScreen extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         loadDatabase();
-        Parent root = FXMLLoader.load(getClass().getResource("FoodPage.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("LoginScreen.fxml"));
         
         Scene scene = new Scene(root);
         
@@ -41,6 +41,9 @@ public class LoginScreen extends Application {
        Database.createGoalsTable();
        Database.createWeightTable();
        Database.createGymTable();
+       Database.createWellnessTable();
+       Database.createExerciseTable();
+       
        
        
     }

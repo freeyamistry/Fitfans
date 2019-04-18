@@ -12,11 +12,13 @@ import java.net.URL;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.time.LocalDate;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -38,7 +40,7 @@ public class SignupScreenController implements Initializable {
     @FXML
     private TextField gender;
     @FXML
-    private TextField dob;
+    private DatePicker dob;
     @FXML
     private Button nextBtn;
 
@@ -52,7 +54,7 @@ public class SignupScreenController implements Initializable {
         String temail = email.getText();
         String tpword = pword.getText();
         String tgender = gender.getText();
-        String tdob = dob.getText();
+        LocalDate tdob = dob.getValue();
 
         try {
             Statement st = conn.createStatement();
@@ -73,7 +75,7 @@ public class SignupScreenController implements Initializable {
 
     @FXML
     private void handleNextButtonAction(ActionEvent event) throws IOException {
-        pageSwitcher.switcher(event, "LoginScreen.fxml");
+        pageSwitcher.switcher(event, "FXMLDocument.fxml");
     }
 
 //    @FXML
